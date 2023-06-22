@@ -1,4 +1,4 @@
-import { DashboardOutlined, ShoppingCartOutlined, ShoppingOutlined } from '@ant-design/icons';
+import { DashboardOutlined, ShoppingCartOutlined, ShoppingOutlined, UserOutlined } from '@ant-design/icons';
 import { APP_PREFIX_PATH } from 'configs/AppConfig'
 
 const basicNavTree = [{
@@ -18,7 +18,6 @@ const basicNavTree = [{
     },
     {
       key: 'catalog',
-      path: `${APP_PREFIX_PATH}/catalog`,
       title: 'sidenav.basic.catalog',
       icon: ShoppingCartOutlined,
       breadcrumb: false,
@@ -57,6 +56,7 @@ const basicNavTree = [{
         },
       ]
     },
+
     {
       key: 'orders',
       path: `${APP_PREFIX_PATH}/orders`,
@@ -64,6 +64,28 @@ const basicNavTree = [{
       icon: ShoppingOutlined,
       breadcrumb: false,
       submenu: []
+    },
+    {
+      key: 'clients',
+      title: 'sidenav.clients',
+      icon: UserOutlined,
+      breadcrumb: false,
+      submenu: [
+        {
+          key: 'clients.list',
+          path: `${APP_PREFIX_PATH}/clients/list`,
+          title: 'sidenav.clients.list',
+          breadcrumb: false,
+          submenu: []
+        },
+        {
+          key: 'clients.groups',
+          path: `${APP_PREFIX_PATH}/clients/groups`,
+          title: 'sidenav.clients.groups',
+          breadcrumb: false,
+          submenu: []
+        },
+      ]
     },
 
   ]
