@@ -59,6 +59,51 @@ export const protectedRoutes = [
         key: 'clients.groups',
         path: `${APP_PREFIX_PATH}/clients/groups`,
         component: React.lazy(() => import('views/app-views/clients/groups')),
-    }
+    },
+    {
+        key: 'banners',
+        path: `${APP_PREFIX_PATH}/banners`,
+        component: React.lazy(() => import('views/app-views/banners')),
+    },
+    {
+        key: 'promo-codes',
+        path: `${APP_PREFIX_PATH}/promo-codes`,
+        component: React.lazy(() => import('views/app-views/promo-codes')),
+    },
+    {
+        key: 'offlineShops.addresses',
+        path: `${APP_PREFIX_PATH}/offline-shops/addresses`,
+        component: React.lazy(() => import('views/app-views/offline-shops/addresses')),
+    },
+    {
+        key: 'offlineShops.geoZones',
+        path: `${APP_PREFIX_PATH}/offline-shops/geo-zones`,
+        component: React.lazy(() => import('views/app-views/offline-shops/geo-zones')),
+    },
+    {
+        key: 'staff',
+        path: `${APP_PREFIX_PATH}/staff`,
+        component: React.lazy(() => import('views/app-views/staff')),
+    },
+    {
+        key: 'mailing',
+        path: `${APP_PREFIX_PATH}/mailing`,
+        component: React.lazy(() => import('views/app-views/mailing')),
+    },
+    {
+        key: 'settings',
+        path: `${APP_PREFIX_PATH}/settings`,
+        component: React.lazy(() => import('views/app-views/settings')),
+    },
+    {
+        key: 'logs',
+        path: `${APP_PREFIX_PATH}/logs`,
+        component: React.lazy(() => import('views/app-views/logs-items')),
+    },
+    {
+        key: 'mobile',
+        path: `${APP_PREFIX_PATH}/mobile`,
+        component: React.lazy(() => import('views/app-views/mobile')),
+    },
 
 ]

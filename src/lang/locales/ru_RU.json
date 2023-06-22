@@ -12,6 +12,21 @@
 	"sidenav.orders": "Заказы",
 	"sidenav.clients": "Клиенты",
 	"sidenav.clients.list": "Список клиентов",
-	"sidenav.clients.groups": "Группы клиентов"
+	"sidenav.clients.groups": "Группы клиентов",
+	
+	"sidenav.banners": "Баннеры",
 
+	"sidenav.promoCodes": "Промокоды",
+
+	"sidenav.offlineShops": "Оффлайн точки",
+	"sidenav.offlineShops.addresses" : "Адреса",
+	"sidenav.offlineShops.geoZones" : "Геозоны",
+
+	"sidenav.staff" : "Сотрудники",
+	"sidenav.mailing" : "Рассылки",
+
+	"sidenav.systems" : "Системные", 
+	"sidenav.systems.settings" : "Настройки",
+	"sidenav.systems.mobile" : "Мобильное приложение",
+	"sidenav.systems.logs" : "Логи"
 }

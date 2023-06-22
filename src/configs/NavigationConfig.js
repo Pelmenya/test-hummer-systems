@@ -1,4 +1,17 @@
-import { DashboardOutlined, ShoppingCartOutlined, ShoppingOutlined, UserOutlined } from '@ant-design/icons';
+import {
+  DashboardOutlined,
+  ShoppingCartOutlined, 
+  ShoppingOutlined, 
+  UserOutlined,
+  UsergroupAddOutlined,
+  PictureOutlined, 
+  GiftOutlined, 
+  ShopOutlined, 
+  MailOutlined,
+  SettingOutlined,
+  MobileOutlined,
+  FileTextOutlined,
+} from '@ant-design/icons';
 import { APP_PREFIX_PATH } from 'configs/AppConfig'
 
 const basicNavTree = [{
@@ -87,13 +100,102 @@ const basicNavTree = [{
         },
       ]
     },
-
+    {
+      key: 'banners',
+      path: `${APP_PREFIX_PATH}/banners`,
+      title: 'sidenav.banners',
+      icon: PictureOutlined,
+      breadcrumb: false,
+      submenu: []
+    },
+    {
+      key: 'promo-codes',
+      path: `${APP_PREFIX_PATH}/promo-codes`,
+      title: 'sidenav.promoCodes',
+      icon: GiftOutlined,
+      breadcrumb: false,
+      submenu: []
+    },
+    {
+      key: 'offline-shops',
+      title: 'sidenav.offlineShops',
+      icon: ShopOutlined,
+      breadcrumb: false,
+      submenu: [
+        {
+          key: 'offline-shops.addresses',
+          path: `${APP_PREFIX_PATH}/offline-shops/addresses`,
+          title: 'sidenav.offlineShops.addresses',
+          breadcrumb: false,
+          submenu: []
+        },
+        {
+          key: 'offline-shops.geoZones',
+          path: `${APP_PREFIX_PATH}/offline-shops/geo-zones`,
+          title: 'sidenav.offlineShops.geoZones',
+          breadcrumb: false,
+          submenu: []
+        }
+      ]
+    },
+    {
+      key: 'staff',
+      path: `${APP_PREFIX_PATH}/staff`,
+      title: 'sidenav.staff',
+      icon: UsergroupAddOutlined,
+      breadcrumb: false,
+      submenu: []
+    },
+    {
+      key: 'mailing',
+      path: `${APP_PREFIX_PATH}/mailing`,
+      title: 'sidenav.mailing',
+      icon: MailOutlined,
+      breadcrumb: false,
+      submenu: []
+    },
   ]
+}];
+
+const systemsNavTree = [{
+  key: 'systems',
+  path: `${APP_PREFIX_PATH}/systems`,
+  title: 'sidenav.systems',
+  breadcrumb: false,
+  isGroupTitle: true,
+  submenu: [
+    {
+      key: 'settings',
+      path: `${APP_PREFIX_PATH}/settings`,
+      title: 'sidenav.systems.settings',
+      icon: SettingOutlined,
+      breadcrumb: false,
+      submenu: []
+    },
+    {
+      key: 'mobile',
+      path: `${APP_PREFIX_PATH}/mobile`,
+      title: 'sidenav.systems.mobile',
+      icon: MobileOutlined,
+      breadcrumb: false,
+      submenu: []
+    },
+    {
+      key: 'logs',
+      path: `${APP_PREFIX_PATH}/logs`,
+      title: 'sidenav.systems.logs',
+      icon: FileTextOutlined,
+      breadcrumb: false,
+      submenu: []
+    },
+  ],
 }]
+
 
 
 const navigationConfig = [
   ...basicNavTree,
+  ...systemsNavTree,
 ]
 
 export default navigationConfig;

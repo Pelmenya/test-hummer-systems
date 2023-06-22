@@ -1,0 +1,14 @@
+import React from 'react';
+
+
+export const Page = () => {
+
+    return (
+        <>
+            Геозоны
+        </>
+    )
+}
+
+
+export default Page;
