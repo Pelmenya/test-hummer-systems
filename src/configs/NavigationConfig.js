@@ -1,28 +1,77 @@
-import { DashboardOutlined } from '@ant-design/icons';
+import { DashboardOutlined, ShoppingCartOutlined, ShoppingOutlined } from '@ant-design/icons';
 import { APP_PREFIX_PATH } from 'configs/AppConfig'
 
-
-const dashBoardNavTree = [{
-  key: 'dashboards',
-  path: `${APP_PREFIX_PATH}/dashboards`,
-  title: 'sidenav.dashboard',
-  icon: DashboardOutlined,
+const basicNavTree = [{
+  key: 'basic',
+  path: `${APP_PREFIX_PATH}/basic`,
+  title: 'sidenav.basic',
   breadcrumb: false,
   isGroupTitle: true,
   submenu: [
     {
-      key: 'dashboards-default',
-      path: `${APP_PREFIX_PATH}/dashboards/default`,
-      title: 'sidenav.dashboard.default',
+      key: 'dashboards',
+      path: `${APP_PREFIX_PATH}/dashboards`,
+      title: 'sidenav.basic.dashboard',
       icon: DashboardOutlined,
       breadcrumb: false,
       submenu: []
-    }
+    },
+    {
+      key: 'catalog',
+      path: `${APP_PREFIX_PATH}/catalog`,
+      title: 'sidenav.basic.catalog',
+      icon: ShoppingCartOutlined,
+      breadcrumb: false,
+      submenu: [
+        {
+          key: 'goods',
+          path: `${APP_PREFIX_PATH}/catalog/goods`,
+          title: 'sidenav.basic.catalog.goods',
+          icon: '',
+          breadcrumb: false,
+          submenu: []
+        },
+        {
+          key: 'categories',
+          path: `${APP_PREFIX_PATH}/catalog/categories`,
+          title: 'sidenav.basic.catalog.categories',
+          icon: '',
+          breadcrumb: false,
+          submenu: []
+        },
+        {
+          key: 'collections',
+          path: `${APP_PREFIX_PATH}/catalog/collections`,
+          title: 'sidenav.basic.catalog.collections',
+          icon: '',
+          breadcrumb: false,
+          submenu: []
+        },
+        {
+          key: 'combo',
+          path: `${APP_PREFIX_PATH}/catalog/combo`,
+          title: 'sidenav.basic.catalog.combo',
+          icon: '',
+          breadcrumb: false,
+          submenu: []
+        },
+      ]
+    },
+    {
+      key: 'orders',
+      path: `${APP_PREFIX_PATH}/orders`,
+      title: 'sidenav.orders',
+      icon: ShoppingOutlined,
+      breadcrumb: false,
+      submenu: []
+    },
+
   ]
 }]
 
+
 const navigationConfig = [
-  ...dashBoardNavTree
+  ...basicNavTree,
 ]
 
 export default navigationConfig;

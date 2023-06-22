@@ -1,0 +1,17 @@
+{
+	"home": "Home",
+	
+    "sidenav.basic": "Основные",
+	"sidenav.basic.dashboard": "Дашборд",
+	"sidenav.basic.catalog": "Каталог",
+	"sidenav.basic.catalog.goods": "Товары",
+	"sidenav.basic.catalog.categories": "Категории",
+	"sidenav.basic.catalog.collections": "Коллекции",
+	"sidenav.basic.catalog.combo": "Комбо",
+
+	"sidenav.orders": "Заказы",
+	"sidenav.clients": "Клиенты",
+	"sidenav.clients.list": "Список клиентов",
+	"sidenav.clients.groups": "Группы клиентов"
+
+}
