@@ -87,10 +87,10 @@ export const UserList = () => {
 			render: (_, elm) => (
 				<div className="text-right d-flex justify-content-end">
 					<Tooltip title="View">
-						<Button type="primary" className="mr-2" icon={<EyeOutlined />} onClick={() => { showUserProfile(elm) }} size="small" />
+						<Button type="primary" className="mr-2" icon={<EyeOutlined />} onClick={(e) => { showUserProfile(elm); e.stopPropagation() }} size="small" />
 					</Tooltip>
 					<Tooltip title="Delete">
-						<Button danger icon={<DeleteOutlined />} onClick={() => { deleteUser(elm.id) }} size="small" />
+						<Button danger icon={<DeleteOutlined />} onClick={(e) => { deleteUser(elm.id); e.stopPropagation() }} size="small" />
 					</Tooltip>
 				</div>
 			)
@@ -101,9 +101,9 @@ export const UserList = () => {
 		return (
 			<Card bodyStyle={{ 'padding': '0px' }}>
 				<div className="table-responsive">
-					<Table columns={tableColumns} dataSource={users} rowKey='id' onRow={(record) => {
+					<Table className='cursor-pointer' columns={tableColumns} dataSource={users} rowKey='id' onRow={(record) => {
 						return {
-							onClick: () => { navigate(`${APP_PREFIX_PATH}/user/${record.id}`) }, // click row
+							onClick: (e) => { navigate(`${APP_PREFIX_PATH}/user/${record.id}`) }, // click row
 						};
 					}} />
 				</div>
