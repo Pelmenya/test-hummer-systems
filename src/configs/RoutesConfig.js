@@ -105,5 +105,9 @@ export const protectedRoutes = [
         path: `${APP_PREFIX_PATH}/mobile`,
         component: React.lazy(() => import('views/app-views/mobile')),
     },
-
+    {
+        key: 'user',
+        path: `${APP_PREFIX_PATH}/user/:id`,
+        component: React.lazy(() => import('views/app-views/user')),
+    },
 ]

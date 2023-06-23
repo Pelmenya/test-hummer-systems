@@ -6,12 +6,16 @@ import UserView from './UserView';
 import AvatarStatus from 'components/shared-components/AvatarStatus';
 import Loading from 'components/shared-components/Loading';
 import { useGetUsersQuery } from 'store/api/users';
+import { useNavigate } from 'react-router-dom';
+import { APP_PREFIX_PATH } from 'configs/AppConfig';
 
 export const UserList = () => {
+	const navigate = useNavigate();
+
 	const [users, setUsers] = useState(null);
 	const [userProfileIsVisible, setUserProfileIsVisible] = useState(false);
 	const [selectedUser, setSelectedUser] = useState(null);
-	const  { data } = useGetUsersQuery();
+	const { data } = useGetUsersQuery();
 
 	useEffect(() => {
 		if (!users) {
@@ -97,7 +101,11 @@ export const UserList = () => {
 		return (
 			<Card bodyStyle={{ 'padding': '0px' }}>
 				<div className="table-responsive">
-					<Table columns={tableColumns} dataSource={users} rowKey='id' />
+					<Table columns={tableColumns} dataSource={users} rowKey='id' onRow={(record) => {
+						return {
+							onClick: () => { navigate(`${APP_PREFIX_PATH}/user/${record.id}`) }, // click row
+						};
+					}} />
 				</div>
 				<UserView data={selectedUser} visible={userProfileIsVisible} close={() => { closeUserProfile() }} />
 			</Card>
